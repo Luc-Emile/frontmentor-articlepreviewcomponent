@@ -1,0 +1,166 @@
+/* =================== DEFAULT =================== */
+@font-face {
+    font-family: Manrope;
+    src: url(./fonts/Manrope/Manrope-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: Manrope, sans-serif, serif;
+    font-size: 13px;
+}
+
+.article,
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =================== LEFT SIDE: IMAGE =================== */
+.left-side {
+    display: flex;
+    align-items: center;
+}
+
+.drawer {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* =================== RIGHT SIDE: TEXT & ICON =================== */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #fff;
+    text-align: left;
+    height: 264px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h2, p, .share-info, .pop-share {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+h2 {
+    color: hsl(217, 19%, 35%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text-info {
+    color: hsl(212, 23%, 69%);
+    font-size: 15px;
+}
+
+.icon-avatar,
+.avatar-info {
+    float: left;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 50px;
+    width: 100%;
+    padding-right: 5px;
+}
+.name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 900;
+}
+
+.date {
+    color: hsl(212, 23%, 69%);
+}
+
+.share {
+    float: right;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: hsl(210, 46%, 95%);
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.icon-share img {
+    width: 20px;
+    height: 20px;
+}
+
+/* The actual popup */
+.pop-share {
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    /* height: 100px; */
+    background-color: hsl(217, 19%, 35%);
+    text-transform: uppercase;
+    color: hsl(212, 23%, 69%);
+    /* display: none; */
+    justify-content: space-evenly;    
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.pop-share.show {
+    visibility: visible;
+    display: flex;
+    transform:translate(-50%,-50%);
+}
+
+
+/* =================== END: COPYRIGHT =================== */
+.attribution {
+    margin-top: 20px;
+}
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+    .article,
+    .container {
+        margin-top: 5px;
+        flex-direction: column;
+        text-align: center;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        display: block;
+        margin: auto;
+        max-width: 330px;
+    }
+
+    .drawer {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .right-side {
+        height: 400px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .left-side {
+        max-height: 264px;
+    }
+
+    .attribution {
+        font-size: 13px;
+    }
+    
+
+}
